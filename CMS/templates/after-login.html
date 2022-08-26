@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <center>
+        <h3> Hi {{username}}!! How are you doing today ?</h3>
+        <br><br>
+        {% for post in posts %}
+            <a href="#">
+                <h2><a href="{{url_for('view_post', sno = user[0])}}"> {{ post[1] }} </a></h2>
+            </a>
+            <span class="badge badge-primary">{{ post[5] }}</span>
+            <p>Contributed by:- {{ post[2] }}</p>
+            <p>{{ post[3] }}</p>
+            <hr>
+        {% endfor %}
+    </center>
+
+{% endblock %}        

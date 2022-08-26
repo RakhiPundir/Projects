@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <center>
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                <strong> {{username}}</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">- {{ num }} Posts</p>
+           <!-- <img src="" alt="" class="intro__img"> -->
+        </section>
+        <br><br>
+        <a href="{{url_for('post')}}" class="btn"><h3>+ Create Post</h3></a>
+        <br><br>
+        <table style="padding:0 5px 0 0;">
+            <tr>
+                <th>S.no</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Uploaded On</th>
+                <!--<th>Post Content</th> -->
+                <th>Actions</th>
+                <!--<th>Image(If Any)</th>
+                <th>Likes</th>
+                <th>Comments</th>
+                <th>Actions</th> -->
+            </tr>
+            {% for user in userDetails %}
+            <tr>
+                <td>{{user[0]}} &emsp;&emsp;</td>
+                <td>{{user[1]}} &emsp;&emsp;</td>
+                <td>{{user[2]}} &emsp;&emsp;</td>
+                <td>{{user[5]}} &emsp;&emsp;</td>
+                 <!--<td>{{user[4]}} &emsp;&emsp;&emsp;&emsp;</td> -->
+                <td>
+                    <a href="{{url_for('view_post', sno = user[0])}}" class="btn">View</a>&emsp;&emsp;
+                   <!--  <a type="submit" value="Edit" class="btn">Edit</a>&emsp;&emsp; -->
+                    <a href="{{url_for('delete_post', sno = user[0])}}" class="btn">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+{% endblock %} 

@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <br><br>
+    <center>
+        <p><b>{{ msg }}</b></p>
+    </center>
+    <form action="" method="POST" id="postform">
+        <div class="container">
+            <hr>
+            <label for="title"><b>Title</b></label>
+            <input type="text" placeholder="Enter Post Title" name="title" id="title" required>
+
+            <label for="author"><b>Author</b></label>
+            <input type="text" placeholder="Enter Author Name" name="author" id="author" required>
+
+            <label for="author"><b>Tags</b></label>
+            <input type="text" placeholder="Tags" name="tags" id="tags" required>
+
+            </hr>
+
+            <label for="content"><b>Post Content</b></label>
+            <!--<textarea name="content" form="postform">Enter text here...</textarea>-->
+            <input type="text" placeholder="Enter Post Content" name="content" id="content" required>
+
+            <button type="submit" class="registerbtn" value="upload">Upload</button>
+        </div>
+    </form>
+    <br><br>
+
+{% endblock %} 

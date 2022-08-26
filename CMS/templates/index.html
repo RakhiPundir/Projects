@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="my-services" id="home">
+            <h2 class="section__title section__title--services">Aalekh</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>"To survive, you must tell stories."</h3>
+                    <p>--Umberto Eco, The Island of the Day Before</p>
+                </div> <!-- / service -->
+          
+                
+                <div class="service">
+                    <h3>"पठन  हमें  सम्पूर्ण बनाता है ,</br></br> वार्तालाप तैयार बनाता है ,</br></br> लेकिन लेखन हमें  अति शुद्ध बनाता है ।"</h3>
+                    <p>— बेकन</p>
+                </div> <!-- / service -->
+             </div>     
+               
+            <a href={{url_for('register')}} class="btn">Register</a> &emsp;&emsp;
+            <a href={{url_for('login')}} class="btn">Login</a>
+        </section>
+        
+        
+
+        
+          <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Stay Faithful <strong> To The Stories In Your Head</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">- Paula Hawkins</p>
+            <img src="{{ url_for('static', filename='giphy.gif') }}" alt="" class="intro__img">
+        </section>
+        
+        
+        <div class="portfolio-item-individual">
+            <p><b><i>Start Your Writing Journey Today With Us..!! </i></b></p>
+            <img src="{{ url_for('static', filename='blogging (1).jpg') }}" alt="">
+            <p>It's SIMPLE,</br> Register, Log on and just start writing. </p>
+            <p>"Writing equips us with communication and thinking skills. Writing expresses who we are as people. Writing makes our thinking and learning visible and permanent. Writing fosters our ability to explain and refine our ideas to others and ourselves."</p>
+        </div>
+        
+        
+          <!-- About me -->
+        <section class="about-me" id="about">
+           <h2 class="section__title section__title--about">Who We Are</h2>
+           <p class="section__subtitle section__subtitle--about"> We prompt people to write </p>
+           
+           <div class="about-me__body">
+               <p>In this hi-tech world, people are engaged in their tight bound lifestyles, somewhere forgetting the art of writing.</p>
+               <p> Writing is not just noting down, but expression of one's thoughts and emotions. So, here we encourage you to write your views down. A special admin panel is also created to track down the activity of your article, which will keep you going. </p>
+           </div>
+           
+           <img src="{{ url_for('static', filename='notepad.jpg') }}" alt=" " class="about-me__img">
+        </section>
+        
+ {% endblock %}
